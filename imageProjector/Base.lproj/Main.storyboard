@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -29,25 +29,45 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="542"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evD-Dy-J8K">
-                                <rect key="frame" x="253" y="550" width="95" height="30"/>
+                                <rect key="frame" x="137" y="550" width="95" height="30"/>
                                 <state key="normal" title="Project image"/>
                                 <connections>
                                     <action selector="buttonProjectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kbe-D9-WsK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOA-WJ-Z7L">
+                                <rect key="frame" x="252" y="550" width="30" height="30"/>
+                                <state key="normal" title="Test"/>
+                                <connections>
+                                    <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YBu-Ss-nID"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKr-gY-ycG">
+                                <rect key="frame" x="491" y="550" width="89" height="30"/>
+                                <state key="normal" title="Connect BLE"/>
+                                <connections>
+                                    <action selector="connectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DVe-xR-Zv0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AKr-gY-ycG" secondAttribute="bottom" constant="20" id="8pm-lB-0P1"/>
+                            <constraint firstItem="evD-Dy-J8K" firstAttribute="leading" secondItem="drL-fe-Qre" secondAttribute="trailing" constant="34" id="Bpk-wn-Axj"/>
+                            <constraint firstItem="AKr-gY-ycG" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="8" id="FgA-Qc-6Td"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EOA-WJ-Z7L" secondAttribute="bottom" constant="20" id="GCE-by-UFG"/>
                             <constraint firstItem="ze6-gd-zBy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HfE-oY-ZNt"/>
                             <constraint firstItem="drL-fe-Qre" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="8" id="JhW-Nz-prG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="drL-fe-Qre" secondAttribute="bottom" constant="20" id="MwT-6b-gx9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="evD-Dy-J8K" secondAttribute="bottom" constant="20" id="RMn-s1-UI7"/>
                             <constraint firstAttribute="trailing" secondItem="ze6-gd-zBy" secondAttribute="trailing" id="UmC-s6-V6U"/>
-                            <constraint firstItem="evD-Dy-J8K" firstAttribute="centerX" secondItem="ze6-gd-zBy" secondAttribute="centerX" id="eAY-y7-oQ4"/>
+                            <constraint firstItem="EOA-WJ-Z7L" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="8" id="bZc-XU-Ogd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="58" id="i4X-zq-z7Q"/>
                             <constraint firstItem="evD-Dy-J8K" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="8" id="iEn-gP-9U1"/>
                             <constraint firstItem="ze6-gd-zBy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vzg-a1-hUp"/>
+                            <constraint firstItem="EOA-WJ-Z7L" firstAttribute="leading" secondItem="evD-Dy-J8K" secondAttribute="trailing" constant="20" id="wzh-zc-NNe"/>
                             <constraint firstAttribute="leadingMargin" secondItem="drL-fe-Qre" secondAttribute="leading" id="xue-9W-Cpz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AKr-gY-ycG" secondAttribute="trailing" id="zuF-9v-MVy"/>
                         </constraints>
                     </view>
                     <connections>

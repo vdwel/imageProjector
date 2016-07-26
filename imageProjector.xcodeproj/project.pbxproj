@@ -14,6 +14,7 @@
 		C5D69D6F1D460929005022E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D69D6D1D460929005022E5 /* LaunchScreen.storyboard */; };
 		C5D69D7A1D460929005022E5 /* imageProjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D69D791D460929005022E5 /* imageProjectorTests.swift */; };
 		C5D69D851D460929005022E5 /* imageProjectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D69D841D460929005022E5 /* imageProjectorUITests.swift */; };
+		C5E91EC11D4804B500E54991 /* bleBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E91EC01D4804B500E54991 /* bleBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C5D69D801D460929005022E5 /* imageProjectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imageProjectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D69D841D460929005022E5 /* imageProjectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageProjectorUITests.swift; sourceTree = "<group>"; };
 		C5D69D861D460929005022E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5E91EC01D4804B500E54991 /* bleBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bleBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		C5D69D631D460929005022E5 /* imageProjector */ = {
 			isa = PBXGroup;
 			children = (
+				C5E91EC01D4804B500E54991 /* bleBrain.swift */,
 				C5D69D641D460929005022E5 /* AppDelegate.swift */,
 				C5D69D661D460929005022E5 /* ViewController.swift */,
 				C5D69D681D460929005022E5 /* Main.storyboard */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					C5D69D601D460929005022E5 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 75PSD5XB6K;
 					};
 					C5D69D741D460929005022E5 = {
 						CreatedOnToolsVersion = 7.3;
@@ -257,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5D69D671D460929005022E5 /* ViewController.swift in Sources */,
+				C5E91EC11D4804B500E54991 /* bleBrain.swift in Sources */,
 				C5D69D651D460929005022E5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,10 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = imageProjector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.appelflap.sander.imageProjector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = imageProjector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.appelflap.sander.imageProjector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +495,7 @@
 				C5D69D8B1D460929005022E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5D69D8C1D460929005022E5 /* Build configuration list for PBXNativeTarget "imageProjectorTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +504,7 @@
 				C5D69D8E1D460929005022E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5D69D8F1D460929005022E5 /* Build configuration list for PBXNativeTarget "imageProjectorUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +513,7 @@
 				C5D69D911D460929005022E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

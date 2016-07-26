@@ -50,6 +50,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        initBLE()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +61,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet weak var imagePicked: UIImageView!
 
+    @IBAction func connectButton(sender: UIButton) {
+       connectDevice()
+    }
+    
+    @IBAction func testButton(sender: UIButton) {
+        activateRainbow()
+    }
+    
     @IBAction func buttonOpenImage(sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
             let imagePicker = UIImagePickerController()
