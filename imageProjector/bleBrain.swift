@@ -16,7 +16,7 @@ var LED_SERVICE_UUID = "ED670000-FE3D-40EF-8254-F9D89A501D6D"
 var LED_COMMAND_UUID = "ED670001-FE3D-40EF-8254-F9D89A501D6D"
 var LED_DATA_UUID = "ED670002-FE3D-40EF-8254-F9D89A501D6D"
 var DEVICE_NAME = "LEDstrip"
-
+var NUMLEDS: UInt8 = 144
 
 import Foundation
 import CoreBluetooth
@@ -165,6 +165,23 @@ func writeCommand(command: [UInt8]){
     }
 }
 
+func writeData(dataArray: [UInt8]){
+    let data = NSData(bytes: dataArray as [UInt8], length: dataArray.count)
+    var datastring = ""
+    var hexByte = ""
+    for c in dataArray {
+        hexByte = String(c, radix: 16)
+        if hexByte.characters.count == 1 {
+            hexByte = "0" + hexByte
+        }
+        datastring += hexByte
+    }
+    NSLog("Sending data: \(datastring)")
+    if (ble.commandChar != nil){
+        ble.connectingPeripheral.writeValue(data, forCharacteristic: ble.dataChar, type: CBCharacteristicWriteType.WithResponse)
+    }
+}
+
 func connectDevice(){
     if (ble.centralManager.state == CBCentralManagerState.PoweredOn){
         NSLog("Scanning")
@@ -190,4 +207,19 @@ func setColor(red:UInt8, green:UInt8, blue:UInt8){
 
 func setBrightness(brightness: UInt8){
     writeCommand([0x02, brightness])
+}
+
+func writeLine(){
+    var data: [UInt8] = []
+    var red: UInt8
+    var green: UInt8
+    var blue: UInt8
+    writeCommand([0x04, NUMLEDS])
+    for i in 0...(NUMLEDS-1){
+        red = UInt8(i)
+        green = UInt8(i)
+        blue = UInt8(i)
+        data += [red,green, blue]
+    }
+    writeData(data)
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ze6-gd-zBy">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="542"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="330"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evD-Dy-J8K">
                                 <rect key="frame" x="137" y="550" width="95" height="30"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKr-gY-ycG">
-                                <rect key="frame" x="491" y="550" width="89" height="30"/>
+                                <rect key="frame" x="256" y="344" width="89" height="30"/>
                                 <state key="normal" title="Connect BLE"/>
                                 <connections>
                                     <action selector="connectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DVe-xR-Zv0"/>
@@ -52,22 +52,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AKr-gY-ycG" secondAttribute="bottom" constant="20" id="8pm-lB-0P1"/>
+                            <constraint firstItem="AKr-gY-ycG" firstAttribute="centerX" secondItem="ze6-gd-zBy" secondAttribute="centerX" id="04S-O3-MCW"/>
+                            <constraint firstItem="AKr-gY-ycG" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="14" id="2Nr-Ta-cPs"/>
                             <constraint firstItem="evD-Dy-J8K" firstAttribute="leading" secondItem="drL-fe-Qre" secondAttribute="trailing" constant="34" id="Bpk-wn-Axj"/>
-                            <constraint firstItem="AKr-gY-ycG" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="8" id="FgA-Qc-6Td"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EOA-WJ-Z7L" secondAttribute="bottom" constant="20" id="GCE-by-UFG"/>
                             <constraint firstItem="ze6-gd-zBy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HfE-oY-ZNt"/>
-                            <constraint firstItem="drL-fe-Qre" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="8" id="JhW-Nz-prG"/>
+                            <constraint firstItem="drL-fe-Qre" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="220" id="JhW-Nz-prG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="drL-fe-Qre" secondAttribute="bottom" constant="20" id="MwT-6b-gx9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="evD-Dy-J8K" secondAttribute="bottom" constant="20" id="RMn-s1-UI7"/>
                             <constraint firstAttribute="trailing" secondItem="ze6-gd-zBy" secondAttribute="trailing" id="UmC-s6-V6U"/>
-                            <constraint firstItem="EOA-WJ-Z7L" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="8" id="bZc-XU-Ogd"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="58" id="i4X-zq-z7Q"/>
-                            <constraint firstItem="evD-Dy-J8K" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="8" id="iEn-gP-9U1"/>
+                            <constraint firstItem="EOA-WJ-Z7L" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="220" id="bZc-XU-Ogd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="270" id="i4X-zq-z7Q"/>
+                            <constraint firstItem="evD-Dy-J8K" firstAttribute="top" secondItem="ze6-gd-zBy" secondAttribute="bottom" constant="220" id="iEn-gP-9U1"/>
                             <constraint firstItem="ze6-gd-zBy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vzg-a1-hUp"/>
                             <constraint firstItem="EOA-WJ-Z7L" firstAttribute="leading" secondItem="evD-Dy-J8K" secondAttribute="trailing" constant="20" id="wzh-zc-NNe"/>
                             <constraint firstAttribute="leadingMargin" secondItem="drL-fe-Qre" secondAttribute="leading" id="xue-9W-Cpz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AKr-gY-ycG" secondAttribute="trailing" id="zuF-9v-MVy"/>
                         </constraints>
                     </view>
                     <connections>

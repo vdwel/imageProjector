@@ -66,7 +66,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func testButton(sender: UIButton) {
-        activateRainbow()
+        writeLine()
     }
     
     @IBAction func buttonOpenImage(sender: UIButton) {
@@ -79,7 +79,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    
+
     
     @IBAction func buttonProjectImage(sender: UIButton) {
         let VWIDTH:CGFloat = 200
